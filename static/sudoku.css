@@ -1,0 +1,73 @@
+/* 스도쿠 보드 스타일 */
+#sudokuBoard {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* 각 셀 스타일 */
+#sudokuBoard td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#sudokuBoard tr:first-child td {
+    border-top: 5px solid black;
+}
+
+#sudokuBoard tr td:first-child {
+    border-left: 5px solid black;
+}
+
+/* 1x1 정사각형 부각 */
+#sudokuBoard tr:nth-child(n) td {
+    border-bottom: 1px solid black;
+}
+
+#sudokuBoard tr td:nth-child(n) {
+    border-right: 3px solid black;
+}
+
+/* 3x3 정사각형 부각 */
+#sudokuBoard tr:nth-child(3n) td,
+#sudokuBoard tr:nth-child(6n) td,
+#sudokuBoard tr:nth-child(9n) td {
+    border-bottom: 5px solid black;
+}
+
+#sudokuBoard tr td:nth-child(3n),
+#sudokuBoard tr td:nth-child(6n),
+#sudokuBoard tr td:nth-child(9n) {
+    border-right: 10px solid black;
+}
+
+/* 입력 필드 스타일 */
+#sudokuBoard input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+}
+
+/* h1 스타일 */
+h1 {
+    color: #4CAF50;
+    font-family: 'Arial', sans-serif;
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+#toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000; /* 다른 요소보다 위에 나타나도록 z-index를 설정 */
+  }
